@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvnm2f2uhjtnm"]
+
+[ext_resource type="Script" uid="uid://da04xki2hcl5n" path="res://lessons/healthpack.gd" id="1_n8cfu"]
+[ext_resource type="Texture2D" uid="uid://dknpi2mq4dhpa" path="res://assets/health_icon.svg" id="1_u4s6q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfyn0"]
+radius = 30.066593
+
+[node name="Healthpack" type="Area2D"]
+script = ExtResource("1_n8cfu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u4s6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cfyn0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
