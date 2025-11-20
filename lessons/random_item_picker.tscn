@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwo6ydyr46xvf"]
+
+[ext_resource type="Script" uid="uid://pnmovcdvllod" path="res://random_item_picker.gd" id="1_cdxkv"]
+
+[node name="RandomItemPicker" type="Node2D"]
+script = ExtResource("1_cdxkv")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
